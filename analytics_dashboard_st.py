@@ -68,8 +68,25 @@ def load_data():
     df_comments = pd.read_csv('Aggregated_Metrics_By_Video.csv')
     df_time = pd.read_csv('Video_Performance_Over_Time.csv')
     
-    # Ensure df_time date column is correct
-    df_time['Date'] = pd.to_datetime(df_time['Date'], format='mixed', dayfirst=True)
+    df_time.columns = df_time.columns.str.strip()
+    
+    date_col = None
+    if 'Date' in df_time.columns:
+        date_col = 'Date'
+    elif 'Day' in df_time.columns:
+        date_col = 'Day'
+    
+    if date_col is None:
+        raise KeyError(f"Date column not found in 'Video_Performance_Over_Time.csv' after cleaning names. Available columns: {df_time.columns.tolist()}")
+
+    # 🎯 NEW FIX: Add errors='coerce' to skip bad values instead of crashing
+    df_time[date_col] = pd.to_datetime(df_time[date_col], format='mixed', dayfirst=True, errors='coerce')
+    
+    # Ensure the column is named 'Date' for the rest of the script to work
+    if date_col != 'Date':
+        df_time.rename(columns={date_col: 'Date'}, inplace=True)
+    # --- END OF ROBUST FIX ---
+    
     
     return df_agg, df_agg_sub, df_comments, df_time
 
