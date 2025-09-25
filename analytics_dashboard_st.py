@@ -39,8 +39,7 @@ def audience_simple(country):
     else:
         return 'Other'
 
-# Data loading and initail engineering
-
+# Data loading and initial engineering
 
 @st.cache_data
 def load_data():
