@@ -149,7 +149,9 @@ pytz @ file:///C:/b/abs_6ap4tsz1ox/croot/pytz_1713974360290/work
 pyuca==1.2
 #pywin32==305.1
 #pywin32-ctypes==0.2.3
-#pywinpty @ file:///C:/b/abs_73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp38-none-win_amd64.whl
+#pywinpty @ file:///C:/b/abs_
+#uptodate
+73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp38-none-win_amd64.whl
 PyYAML @ file:///C:/b/abs_14xkfs39bx/croot/pyyaml_1728657968772/work
 pyzmq @ file:///C:/b/abs_89aq69t0up/croot/pyzmq_1705605705281/work
 QDarkStyle==3.2.3
