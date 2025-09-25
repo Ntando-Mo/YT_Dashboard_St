@@ -41,7 +41,7 @@ def audience_simple(country):
 
 # Data loading and initial engineering
 
-@st.cache_data
+@st.cache
 def load_data():
     """Loads raw data, renames columns, and performs core type conversions."""
     # Load and clean df_agg
