@@ -1,7 +1,6 @@
-pip>=24
-setuptools>=69
-wheel
-streamlit
-pandas
-numpy
-plotly
+streamlit==1.32.2
+pandas==2.2.2
+numpy==1.26.4
+plotly==5.20.0
+setuptools==70.0.0
+wheel==0.43.0
