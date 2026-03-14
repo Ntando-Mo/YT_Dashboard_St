@@ -7,6 +7,12 @@ import plotly.express as px
 import streamlit as st
 from datetime import datetime
 
+try:
+    import pkg_resources
+except ModuleNotFoundError:
+    import subprocess
+    subprocess.check_call(["pip", "install", "setuptools", "wheel"])
+    import pkg_resources
 # Helper Functions
 
 def style_negative(v, props=''):
