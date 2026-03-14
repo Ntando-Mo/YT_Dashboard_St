@@ -1,4 +1,6 @@
-setuptools
+pip>=24
+setuptools>=69
+wheel
 streamlit
 pandas
 numpy
